@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div>
         
-        <label htmlFor="ip">Enter your name: </label><br/>
+        <label htmlFor="ip">Enter your name: </label><br/><br/>
       <input onChange={(e) => {
         setName(e.target.value)
       }} type="text" id="ip" />
