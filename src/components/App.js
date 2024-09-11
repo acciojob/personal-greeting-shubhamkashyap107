@@ -1,29 +1,21 @@
-
-import React, { useState } from "react";
-import './../styles/App.css';
+import React, { useState } from 'react'
 
 const App = () => {
-  const[name, setName] = useState("")
-
+  const [text, setText] = useState()
+  console.log(text)
   return (
     <div>
-        
-        <label htmlFor="ip">Enter your name: </label><br/><br/>
-      <input onChange={(e) => {
-        setName(e.target.value)
-      }} type="text" id="ip" />
+      
 
+      <label htmlFor='ip'>Enter your name:</label><br/>
+      <input id='ip' type='text' onChange={(e) => {
+        setText(e.target.value)
+      }} />
 
-    {/* {name && <p>Hello {name}!</p>} */}
-
-
-      <p>{name}</p>
+      {text && <p>Hello {text}!</p>}
 
     </div>
   )
 }
 
 export default App
-
-
-//git clone url -> cd fileName -> npm i -> npm start -> git add . -> git commit -m"Commit" -> git push origin master
